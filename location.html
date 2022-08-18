@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script> 
+        $(function(){
+         $("#globnavbar").load("navbar.html"); 
+        });
+      </script> 
+    <title>Location</title>
+</head>
+<body>
+    <div id="globnavbar"></div>
+    <section class = "content">
+        <div>
+            <h1>Location Information</h1>
+        </div>
+        <article id = "locationP">
+            <p>href: <span id="locHref"></span></p>
+            <p>Host Name: <span id="locHostName"></span></p>
+            <p>Path Name: <span id="locPathName"></span></p>
+            <p>Protocol: <span id="locProtocol"></span></p>
+        </article>
+    </section>
+    <script>
+        document.getElementById("locHref").innerHTML = location.href;
+        document.getElementById("locHostName").innerHTML = location.hostname;
+        document.getElementById("locPathName").innerHTML = location.pathname;
+        document.getElementById("locProtocol").innerHTML = location.protocol;
+    </script>
+</body>
+</html>

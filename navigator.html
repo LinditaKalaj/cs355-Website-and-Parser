@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script> 
+        $(function(){
+         $("#globnavbar").load("navbar.html"); 
+        });
+      </script> 
+    <title>Navigator</title>
+</head>
+<body>
+    <div id="globnavbar"></div>
+    <section class = "content">
+        <h1>Navigator Information</h1>
+        <article id = "navigatorPg">
+            <p>Browser Name: <span id="navAppName"></span> <em>*</em></p>
+            <p>Product: <span id="navProduct"></span><em>*</em></p>
+            <p>Version: <span id="navAppVersion"></span></p>
+            <p>User Agent: <span id="navUserAgent"></span></p>
+            <p>Platform: <span id="navPlatform"></span></p>
+            <p>Language: <span id="navLanguage"></span></p>
+        </article>
+    </section>
+     <script>
+        document.getElementById("navAppName").innerHTML = navigator.appName;
+        document.getElementById("navProduct").innerHTML = navigator.product;
+        document.getElementById("navAppVersion").innerHTML = navigator.appVersion;
+        document.getElementById("navUserAgent").innerHTML = navigator.userAgent;
+        document.getElementById("navPlatform").innerHTML = navigator.platform;
+        document.getElementById("navLanguage").innerHTML = navigator.language;
+    </script>
+</body>
+</html>

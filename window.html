@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script> 
+        $(function(){
+         $("#globnavbar").load("navbar.html"); 
+        });
+      </script>  
+    <title>Window</title>
+</head>
+<body>
+    <div id="globnavbar"></div>
+    <section class = "content">
+        <h1>Window Size</h1>
+        <article id = "windowP">
+            <p>Window height: <span id = windowH></span></p>
+            <p>Window width: <span id = windowW></span></p>
+        </article>
+    </section>
+    <script>
+        document.getElementById("windowH").innerHTML = window.innerHeight;
+        document.getElementById("windowW").innerHTML = window.innerWidth;
+    </script></br>
+</body>
+</html>

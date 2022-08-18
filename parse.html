@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script> 
+        $(function(){
+            $("#globnavbar").load("navbar.html"); 
+        });
+        </script> 
+    <title>Parse</title>
+</head>
+<body>
+    <div id="globnavbar"></div>
+    <h1 id = "parseh1">Search a document!</h1>
+    <section class = "content" id = "content-parse">
+        <article id="magglass">
+            <img src="img/magglass.png" alt="Magnifying glass">
+        </article>
+        <article id = "form-holder">
+            <form id = phpform action="parse.php" method="post">
+                <p>Source Name:</p><p><input type="text" name="source_name" required/></p>
+                <p>Source URL:</p><p><input type="text" name="source_url" required/></p>
+                <p>Begin (optional):</p><p><input type="text" name="source_begin"/></p>
+                <p>End (optional):</p><p><input type="text" name="source_end"/></p>
+                <p><input type="submit" id="subbutton" value="Parse"/></p>
+            </form>
+        </article>
+    </section>
+</body>
+</html>

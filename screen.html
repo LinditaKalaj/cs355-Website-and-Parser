@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script> 
+        $(function(){
+         $("#globnavbar").load("navbar.html"); 
+        });
+      </script> 
+    <title>Screen</title>
+</head>
+<body>
+    <div id="globnavbar"></div>
+        <section class = "content">
+        <h1>Monitor Information</h1>
+        <article id = "screenP">
+            <p>Screen Width: <span id="sWidth"></span></p>
+            <p>Screen Height: <span id="sHeight"></span></p>
+            <p>Available Width: <span id="availWidth"></span></p>
+            <p>Available Height: <span id="availHeight"></span></p>
+            <p>Color Depth: <span id="colorDepth"></span></p>
+            <p>Pixel Depth: <span id="pixelDepth"></span></p>
+        </article>
+        </section>
+    <script>
+        document.getElementById("sWidth").innerHTML = screen.width;
+        document.getElementById("sHeight").innerHTML = screen.height;
+        document.getElementById("availWidth").innerHTML = screen.availWidth;
+        document.getElementById("availHeight").innerHTML = screen.availHeight;
+        document.getElementById("colorDepth").innerHTML = screen.colorDepth;
+        document.getElementById("pixelDepth").innerHTML = screen.pixelDepth;
+    </script>
+</body>
+</html>

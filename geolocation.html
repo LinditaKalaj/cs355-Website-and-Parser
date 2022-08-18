@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script> 
+			$(function(){
+			 $("#globnavbar").load("navbar.html"); 
+			});
+		  </script> 
+    <title>Geolocation</title>
+</head>
+<body>
+    <div id="globnavbar"></div>
+    <section class = "content">
+      <div>
+        <h1>Geolocation Information</h1>
+        <h2>Click allow to get coordinates!</h2>
+        <button onclick="getLocation()">Allow</button>
+      </div>
+    <article id = "geolocationP">
+      <p>Latitude: <span id = latit></span></p>
+      <p>Longitude: <span id = longit></span></p>
+    </article>
+    <script>
+      
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+          x.innerHTML = "Please allow to see coordinates!";
+        }
+      }
+      
+      function showPosition(position) {
+          document.getElementById("latit").innerHTML = position.coords.latitude;
+          document.getElementById("longit").innerHTML = position.coords.longitude;
+      }
+      </script>
+</body>
+</html>

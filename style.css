@@ -1,0 +1,322 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: "Monseratt", sans-serif;
+  min-height: 95vh;
+}
+
+
+html{
+  background-color: #ffbbe8;
+}
+h2, h3{
+  font-family: "Monseratt", sans-serif;
+  color: #3f48cc;
+  font-size: 20px;
+}
+.header {
+  text-align: center;
+}
+.header #headPics {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.header img {
+  max-width: 33%;
+}
+
+cite, .author{
+  font-size: 12px;
+}
+
+
+h1{
+  font-family: "Monseratt", sans-serif;
+  color: #3f48cc;
+  font-size: 30px;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  
+}
+button, #subbutton {
+  border: 5px solid pink;
+  border-image: url(img/pixborder.png);
+  border-image-slice: 100;
+  border-image-repeat: stretch;
+  background-color: lavender;
+  font-size: 15px;
+  padding: 1px 5px 1px 5px;
+}
+
+.dropdown {
+  text-align: center;
+  display: inline-block;
+}
+a {
+  text-align: center;
+}
+
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 15px;
+  text-decoration: none;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: lavender;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: grey;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #eeeeee;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#navbar h1{
+  padding-top: 20%; 
+  color: lavender;
+  text-align: center;
+}
+#navbar .dropdown-content{
+  background-color: lavender;
+}
+#navbar{
+  background-color: #516af6;
+}
+#navbar ul{
+  display: flex;
+  justify-content: center;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  padding: 50px 100px 50px 100px;
+}
+
+article h2, dl{
+  text-align: center;
+  padding: 20px;
+}
+
+article {
+  border: 20px solid pink;
+  border-image: url(img/pixborder.png);
+  border-image-slice: 100;
+  border-image-repeat: stretch;
+  background-color: lavender;
+  padding: 10px;
+}
+
+#mePicture {
+  border: none;
+}
+#emailgif, #magglass{
+  border: none;
+  background: none;
+  flex-basis: 20%;
+
+}
+#aboutmeart{
+  min-width: 250px;
+}
+
+#contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px
+}
+
+#form-holder {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 400px){
+  #phpform{
+    flex-basis: 100%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  #phpform input {
+    flex-basis: 100%;
+    min-width: 98%;
+    flex-grow: 12;
+  }
+  
+}
+
+#aboutmeh1, #contacth1, #parseh1, #parseResultsh1{
+  text-align: right;
+  padding-right: 30px;
+}
+
+.content #cresources{
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+#hamburger-input{
+  display: none;
+}
+
+#hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 45px;
+    display: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    background-image: url('img/hamburg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#hamburger-menu #sidebar-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #516af6;
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+}
+
+#hamburger-menu a {
+  color: pink;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#hamburger-menu h2 {
+  color: lavender;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+}
+#hamburger-input:checked ~ .overlay{
+   visibility: visible;
+  opacity: 0.4;
+}
+
+#acchome a {
+  font-size: 20px;
+}
+
+table {
+  border: 20px solid pink;
+  border-image: url(img/pixborder.png);
+  border-image-slice: 100;
+  border-image-repeat: stretch;
+  background-color: lavender;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+th{
+  padding: 20px;
+}
+td{
+  padding: 10px;
+}
+#cparse{
+  text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  #navbar {
+    display: none;
+  }
+  #hamburger-menu {
+    display: inline;
+  }
+  .accordion > input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+  }
+  
+  .accordion .acccontent {
+    overflow-y: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .acccontent {
+    height: auto;
+    overflow: visible;
+  }
+  
+  .accordion label {
+    display: block;
+  }
+
+  .accordion .acccontent {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
