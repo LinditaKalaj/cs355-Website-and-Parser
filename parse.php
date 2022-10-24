@@ -5,10 +5,10 @@ $url = $_POST["source_url"];
 $begin = $_POST["source_begin"];
 $end = $_POST["source_end"];
 
-$servername = "mars.cs.qc.cuny.edu";//getenv('servername');
-$username = "kali1197";//getenv('username');
-$password = "12131197";//getenv('password');
-$dbname = "kali1197";//getenv('dbname');
+$servername = getenv('servername');
+$username = getenv('username');
+$password = getenv('password');
+$dbname = getenv('dbname');
   
 try {
   $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
