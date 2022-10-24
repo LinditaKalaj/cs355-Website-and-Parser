@@ -6,9 +6,9 @@ $begin = $_POST["source_begin"];
 $end = $_POST["source_end"];
 
 $servername = getenv('servername');
-$username = getenv('username')
-$password = getenv('password')
-$dbname = getenv('dbname')
+$username = getenv('username');
+$password = getenv('password');
+$dbname = getenv('dbname');
   
 try {
   $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
