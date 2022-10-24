@@ -5,12 +5,13 @@ $url = $_POST["source_url"];
 $begin = $_POST["source_begin"];
 $end = $_POST["source_end"];
 
-$servername = "mars.cs.qc.cuny.edu";
-$username = "kali1197";
-$password = "12131197";
-
+$servername = getenv('servername');
+$username = getenv('username')
+$password = getenv('password')
+$dbname = getenv('dbname')
+  
 try {
-  $pdo = new PDO("mysql:host=$servername;dbname=kali1197", $username, $password);
+  $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
