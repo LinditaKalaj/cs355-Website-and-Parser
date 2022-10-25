@@ -16,6 +16,7 @@ try {
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
+  die();
 }
 $url = filter_var($url, FILTER_SANITIZE_URL);
 if (!filter_var($url, FILTER_VALIDATE_URL)){
