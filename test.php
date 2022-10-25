@@ -1,6 +1,6 @@
 <?php
 $servername = '127.0.0.1';
-$username = apache_getenv('DB_USER');
+$username = $_SERVER['DB_USER'];
 $password = getenv('DB_PASS');
 $dbname = $_SERVER['DB_NAME'];
   
