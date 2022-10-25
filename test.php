@@ -1,8 +1,8 @@
 <?php
 $servername = '127.0.0.1';
-$username = getenv('DB_USER');
-$password = getenv('DB_PASS');
-$dbname = getenv('DB_NAME');
+$username = $_SERVER['DB_USER'];
+$password = $_SERVER['DB_PASS'];
+$dbname = $_SERVER['DB_NAME'];
   
 try {
   $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
